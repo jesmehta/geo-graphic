@@ -43,7 +43,7 @@ The GPL licence of this repository's own code doesn't change the licences of the
 
 ## Historical sketches
 
-The archived sketches are the author's own. The 2021 *Perlin Topography* page ends with the author's notice: *"Code is copyright by Jesal Mehta, 15/01/2021. The output of this program is free to use for non-commercial purposes (for your plotters, laser engravers etc). Contact me if you need a different license."* The same terms apply to the 2020 *Perlin Contour* sketches, whose pages don't repeat the notice. The code licence intended for the current tool doesn't cover the archive. A related 2020 heightmap sketch adapted from a Daniel Shiffman / The Coding Train example (edited by SacrificeProductions) isn't included, because its terms haven't been reviewed.
+The archived sketches are the author's own. The 2021 *Perlin Topography* page ends with the author's notice: *"Code is copyright by Jesal Mehta, 15/01/2021. The output of this program is free to use for non-commercial purposes (for your plotters, laser engravers etc). Contact me if you need a different license."* The same terms apply to the 2020 *Perlin Contour* sketches, whose pages don't repeat the notice. The GPL-3.0 licence of the current tool doesn't cover the archive. A related 2020 heightmap sketch adapted from a Daniel Shiffman / The Coding Train example (edited by SacrificeProductions) isn't included, because its terms haven't been reviewed.
 
 ## Screenshots and outputs
 
