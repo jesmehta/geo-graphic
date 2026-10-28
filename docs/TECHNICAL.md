@@ -1,6 +1,6 @@
 # Geo-Graphic: technical notes
 
-How the current version (5.8.1; the page still calls itself *Island Generator*) computes and draws a landscape. Everything here describes the code as it is in this repository. Proposed improvements are listed separately at the end and are not features. For what each control does from a user's point of view, see the [README](../README.md); for how the design came about, see [HISTORY.md](../HISTORY.md).
+How the current version (5.8.1) computes and draws a landscape. Everything here describes the code as it is in this repository. Proposed improvements are listed separately at the end and are not features. For what each control does from a user's point of view, see the [README](../README.md); for how the design came about, see [HISTORY.md](../HISTORY.md).
 
 ## Contents
 
@@ -25,10 +25,10 @@ All computation happens in the visitor's browser, on the page's main thread. The
 |---|---|---|
 | `model.js` | `IG.model` | Pure maths, no DOM and no p5: seeded noise, terrain, centres, field sampling, sea level and bands, marching squares, line simplification, smoothing, hachures, stipple, distance transform, page sizes, presets. |
 | `ui.js` | `IG.settings`, `IG.ui` | The settings object, every control, the caption and *This map* facts, the address-bar state, centre edits, panels, tooltips, keys and the actual-size preview overlay. |
-| `island_generator.js` | `IG.sketch` | The p5 instance: the view and frame, the change tiers, progressive sampling, colour palettes, on-screen contour and engraving rendering, the overlay, pointer input, and all exports including a minimal 16-bit PNG encoder. |
-| `index.html`, `island_generator.css` | n/a | Markup, help text and styles. |
+| `geo_graphic.js` | `IG.sketch` | The p5 instance: the view and frame, the change tiers, progressive sampling, colour palettes, on-screen contour and engraving rendering, the overlay, pointer input, and all exports including a minimal 16-bit PNG encoder. |
+| `index.html`, `geo_graphic.css` | n/a | Markup, help text and styles. |
 
-The scripts are plain scripts sharing `window.IG`, loaded in order p5 1.9.0 → `model.js` → `ui.js` → `island_generator.js`. p5 provides the canvas and draw loop. The terrain is a plain JavaScript function, so the screen, the statistics and every export call the same `height(x, y)`.
+The scripts are plain scripts sharing `window.IG`, loaded in order p5 1.9.0 → `model.js` → `ui.js` → `geo_graphic.js`. p5 provides the canvas and draw loop. The terrain is a plain JavaScript function, so the screen, the statistics and every export call the same `height(x, y)`.
 
 ## Coordinates: landscape, frame, print
 
@@ -118,7 +118,7 @@ With no centres (all removed) and a shape other than Coast, the mask is skipped.
 - **Land levels**: `step = (top − sea) / bands`, where `top` is the highest height in the reference square. The levels are `sea + b · step` for b = 0..bands−1. Terrain outside the reference square can be higher than `top`; it takes the top band.
 - **Sea levels**: the same number of bands from the coast down to the deepest reference point, each with its own step `depthStep = (sea − min) / bands`, because the sea is usually much deeper than the hills are high.
 - **Bands = 0** means smooth shading through a 256-step colour table; contour lines are then only the coast, and no depth lines are drawn.
-- **Palettes** (`palette()` in `island_generator.js`): Grey (land 96–246 grey), Thermal (hue from 270° down to 0°, cold to hot), Topographic (a ramp of green, tan, brown, rock and snow). Without *Depth contours* the sea is a single flat colour; with it, the sea runs from a visible shallow tone to deep.
+- **Palettes** (`palette()` in `geo_graphic.js`): Grey (land 96–246 grey), Thermal (hue from 270° down to 0°, cold to hot), Topographic (a ramp of green, tan, brown, rock and snow). Without *Depth contours* the sea is a single flat colour; with it, the sea runs from a visible shallow tone to deep.
 
 ## Contours and simplification
 
@@ -157,7 +157,7 @@ All engraving sizes are in millimetres of print. The tracer works on a field sam
 
 ## Screen rendering
 
-**Change tiers.** `ui.js` sends each change into one tier, and `island_generator.js` keeps dirty flags:
+**Change tiers.** `ui.js` sends each change into one tier, and `geo_graphic.js` keeps dirty flags:
 
 | Tier | What reruns | Typical settings |
 |---|---|---|
@@ -220,7 +220,7 @@ The heightmap is **relative to the exported crop**: two crops of the same landsc
 - Pinch-zoom isn't implemented; real-device testing on phones and high-DPI desktops is pending.
 - Lists of added, moved or removed centres read from a link have no length limit.
 - SVG output hasn't yet been tried in Inkscape, laser software or on a plotter.
-- Some source headers still say v5.0, and some comments refer to a design document that isn't in this repository.
+- Some comments refer to a design document that isn't in this repository.
 
 ## Possible future work (not implemented)
 

@@ -4,7 +4,7 @@
 
 Geo-Graphic turns seeded noise into a landscape and draws it as a map: grey or coloured contour bands, topographic tints, contour lines on paper, or engraved hachures and stipple. One set of controls moves it between a single island, an archipelago, a coastline, a mainland and a mountain range. You choose what part of the landscape sits in a frame of a chosen shape, set a print size, and export a print-resolution PNG, a 16-bit heightmap, or SVG vectors for plotting and layered cutting.
 
-**Formerly *Island Generator*.** It grew out of the author's hand-coded *Perlin Contour* sketches of 2020, and from 2026 it was redeveloped with AI assistance. The page itself still says *Island Generator*: its title, headings, source file names (`island_generator.*`) and export file names (`island-<seed>-…`) haven't been renamed yet.
+**Formerly *Island Generator*.** It grew out of the author's hand-coded *Perlin Contour* sketches of 2020, and from 2026 it was redeveloped with AI assistance. The older screenshots below still show the former name; the internal JavaScript namespace (`IG`) keeps its original initials.
 
 There is no public hosted demo yet. To try it, run it locally (below).
 
@@ -33,10 +33,10 @@ Five static files, no build step:
 
 ```text
 index.html             page markup, help text, script order
-island_generator.css   styles
+geo_graphic.css        styles
 model.js               terrain, levels, contours, engraving (no DOM, no p5)
 ui.js                  settings, controls, map facts, URL state
-island_generator.js    the p5 sketch: view, rendering, export
+geo_graphic.js         the p5 sketch: view, rendering, export
 ```
 
 Open `index.html` in a browser, or serve the folder with any static file server:
@@ -46,7 +46,7 @@ python -m http.server 8000
 # then open http://localhost:8000/
 ```
 
-It needs a network connection for p5.js 1.9.0 (cdnjs) and the Space Mono and Rajdhani fonts (Google Fonts). The scripts are plain (not ES modules) and must load in order: p5 → `model.js` → `ui.js` → `island_generator.js`. The heightmap export also needs the browser's `CompressionStream` API (see [Browser and performance limits](#browser-and-performance-limits)).
+It needs a network connection for p5.js 1.9.0 (cdnjs) and the Space Mono and Rajdhani fonts (Google Fonts). The scripts are plain (not ES modules) and must load in order: p5 → `model.js` → `ui.js` → `geo_graphic.js`. The heightmap export also needs the browser's `CompressionStream` API (see [Browser and performance limits](#browser-and-performance-limits)).
 
 ## The landscape
 
@@ -135,7 +135,7 @@ Things to know:
 - **Heightmap** values are **normalised to the frame**: the lowest point inside the exported area becomes 0 and the highest 65535. They aren't absolute heights, and two different crops of the same landscape aren't on the same scale. The sea is not flattened.
 - **SVG** paths are traced from a grid of up to 4 samples per millimetre and simplified to within 0.08 mm, so they're a close vector approximation of the terrain, not an exact one. Lines stay open where they leave the frame, so a plotter doesn't trace the border. In Engraved style, *SVG lines* also contains the water lines and the hachure or stipple strokes, grouped by stroke weight.
 - **SVG metadata**: each SVG starts with a comment holding the version, the seed and the settings part of the page's link (`?s=…`), so a file records how it was made. Add those settings to the tool's address to reopen the map. The page address itself isn't included.
-- File names record the seed, sheet size, style and dpi, for example `island-2020-210x297mm-hachures-300dpi.png`.
+- File names record the seed, sheet size, style and dpi, for example `geo-graphic-2020-210x297mm-hachures-300dpi.png`.
 
 ![Three crops from exported A4 sheets at 300 dpi, side by side: Stipple at 0.2 mm spacing (dense, dark), Stipple at 0.5 mm spacing (sparse, separate strokes), and Hachures (contour-to-contour strokes with visible rows).](docs/images/v5.8-export-crops-stipple-0.2-0.5-hachures.png)
 
@@ -161,7 +161,7 @@ Click: add a centre · drag a marker: move it · double-click a marker: remove i
 - **Links** with very long lists of added or moved centres are accepted without a length limit, so an unusually long link can make the page slow.
 - **Fabrication:** the SVG layers and lines haven't yet been tried in Inkscape, laser-cutting software or on a plotter.
 - **Network:** p5.js and the fonts come from CDNs, so the page doesn't work offline as shipped.
-- The "← Form follows f(x)" link points to the parent folder (`../`), a leftover from the site the tool was first built for. Some source comments refer to a design document (`ISLAND-GENERATOR.md`) that isn't part of this repository, and some file headers still carry an older version number (v5.0).
+- The "← Form follows f(x)" link points to the parent folder (`../`), a leftover from the site the tool was first built for. Some source comments refer to a design document (`ISLAND-GENERATOR.md`) that isn't part of this repository.
 
 ## Licence and terms
 

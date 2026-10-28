@@ -25,8 +25,8 @@ None of these is claimed as an invention. Each is a published or widely known te
 | Exact Euclidean distance transform | Felzenszwalb & Huttenlocher, *Distance Transforms of Sampled Functions* | `model.js` `distanceFromLand` |
 | Slope hachures ("the steeper, the darker") | J. G. Lehmann (1799) | `model.js` `hachuresSteps` |
 | Sun-weighted (oblique-light) hachure shading | The Swiss Dufour map tradition | `model.js` `shade` |
-| Smoothed terrain and fine-interval dynamic hachures | Warren Davison, [blog post on dynamic hachure contours in ArcGIS Pro](https://warrenrdavison.wixsite.com/maps/post/revisiting-hachure-lines-dynamic-hachure-contours-in-arcgis-pro), brought in by the author as reference reading; method influence only, no code or images copied | `model.js` `blurField`, row spacing in `island_generator.js` |
-| PNG file format, CRC-32 and zlib/deflate | The PNG specification; compression by the browser's `CompressionStream` | `island_generator.js` `png16` |
+| Smoothed terrain and fine-interval dynamic hachures | Warren Davison, [blog post on dynamic hachure contours in ArcGIS Pro](https://warrenrdavison.wixsite.com/maps/post/revisiting-hachure-lines-dynamic-hachure-contours-in-arcgis-pro), brought in by the author as reference reading; method influence only, no code or images copied | `model.js` `blurField`, row spacing in `geo_graphic.js` |
+| PNG file format, CRC-32 and zlib/deflate | The PNG specification; compression by the browser's `CompressionStream` | `geo_graphic.js` `png16` |
 
 **Provenance still to confirm.** The compact implementations of mulberry32 and the Felzenszwalb–Huttenlocher distance transform closely follow well-known published forms. Before a licence is applied, their exact sources and any notices they require should be identified (see the README's licence section). This doesn't apply to the methods themselves.
 

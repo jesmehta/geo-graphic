@@ -183,7 +183,7 @@ The worst frame during zoom and pan dropped to about 80 ms.
 
 ### Renaming to Geo-Graphic (October 2026)
 
-While the tool was being prepared for public release as its own repository, it was renamed **Geo-Graphic**. The page, source file names and export names still use *Island Generator*, and the historical record keeps the original version names.
+While the tool was being prepared for public release as its own repository, it was renamed **Geo-Graphic**. The page title and heading, the source file names (`geo_graphic.js`, `geo_graphic.css`) and the export file names (`geo-graphic-…`) were renamed to match; the historical record keeps the original version names.
 
 ## 4. What came from where
 
