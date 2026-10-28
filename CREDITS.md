@@ -19,7 +19,7 @@ None of these is claimed as an invention. Each is a published or widely known te
 | Ridged multifractal noise | Musgrave's ridged multifractal | `model.js` `ridged` |
 | Domain warping | Standard technique (offsetting the sampling coordinates by further noise) | `model.js` `height` |
 | Smooth minimum (log-sum-exp) | Standard technique | `model.js` `smin` |
-| mulberry32 seeded random generator | A widely circulated small generator; its original source and terms are to be confirmed (see below) | `model.js` `rng` |
+| mulberry32 seeded random generator | Tommy Ettinger, [mulberry32](https://gist.github.com/tommyettinger/46a874533244883189143505d203312c), dedicated to the public domain (CC0 1.0); used here in its widely circulated JavaScript form | `model.js` `rng` |
 | Marching squares | Standard isoline algorithm | `model.js` `isolines` |
 | Ramer–Douglas–Peucker line simplification | Ramer (1972); Douglas & Peucker (1973) | `model.js` `simplify` |
 | Exact Euclidean distance transform | Felzenszwalb & Huttenlocher, *Distance Transforms of Sampled Functions* | `model.js` `distanceFromLand` |
@@ -28,7 +28,7 @@ None of these is claimed as an invention. Each is a published or widely known te
 | Smoothed terrain and fine-interval dynamic hachures | Warren Davison, [blog post on dynamic hachure contours in ArcGIS Pro](https://warrenrdavison.wixsite.com/maps/post/revisiting-hachure-lines-dynamic-hachure-contours-in-arcgis-pro), brought in by the author as reference reading; method influence only, no code or images copied | `model.js` `blurField`, row spacing in `geo_graphic.js` |
 | PNG file format, CRC-32 and zlib/deflate | The PNG specification; compression by the browser's `CompressionStream` | `geo_graphic.js` `png16` |
 
-**Provenance still to confirm.** The compact implementations of mulberry32 and the Felzenszwalb–Huttenlocher distance transform closely follow well-known published forms. Before a licence is applied, their exact sources and any notices they require should be identified (see the README's licence section). This doesn't apply to the methods themselves.
+**Provenance.** mulberry32 is public domain (CC0) by its author's dedication. The distance transform implements the algorithm published by Felzenszwalb and Huttenlocher, credited above; algorithms themselves aren't subject to copyright, and no third-party implementation is known to have been copied.
 
 ## Software and fonts
 
