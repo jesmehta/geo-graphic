@@ -39,7 +39,7 @@ None of these is claimed as an invention. Each is a published or widely known te
 | [Space Mono](https://fonts.google.com/specimen/Space+Mono) | Interface font | SIL Open Font License 1.1 (The Space Mono Project Authors) | Loaded from Google Fonts; not bundled |
 | [Rajdhani](https://fonts.google.com/specimen/Rajdhani) | Interface font | SIL Open Font License 1.1 (Indian Type Foundry) | Loaded from Google Fonts; not bundled |
 
-Any future licence for this repository's own code doesn't change the licences of these components.
+The GPL licence of this repository's own code doesn't change the licences of these components.
 
 ## Historical sketches
 

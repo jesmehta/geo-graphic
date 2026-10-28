@@ -165,7 +165,7 @@ Click: add a centre · drag a marker: move it · double-click a marker: remove i
 
 ## Licence and terms
 
-- **Application code:** no licence has been applied yet. The author intends to release the current code under an open-source licence (MIT is the preferred choice), subject to a provenance review of a few compact algorithm implementations (see [CREDITS.md](CREDITS.md)). Until a `LICENSE` file is added, no open-source permissions are granted.
+- **Application code** (`index.html`, `geo_graphic.css`, `geo_graphic.js`, `model.js`, `ui.js`): © Jesal Mehta, licensed under the **GNU General Public License v3.0 or later** ([LICENSE](LICENSE)). You may use, study, change and share it; if you distribute a modified version, including by hosting it on a website, you must make its source available under the same licence. Third-party components keep their own licences (see [CREDITS.md](CREDITS.md)).
 - **Historical sketches** in [`archive/`](archive/README.md) stay under the author's original notice: copyright Jesal Mehta; the output is free to use for non-commercial purposes; contact the author for a different licence. The code licence doesn't cover them.
 - **Screenshots and documentation:** © Jesal Mehta, all rights reserved.
 - **Maps and drawings you make with the tool** belong to you, for **non-commercial use only**. When you share them, credit Jesal Mehta or tag @cabofcuriosity.
