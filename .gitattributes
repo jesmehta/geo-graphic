@@ -1,0 +1,3 @@
+# Historical sketches are kept byte-for-byte as the author left them,
+# including their original line endings: no conversion under archive/.
+archive/** -text
