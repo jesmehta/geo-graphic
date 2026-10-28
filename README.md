@@ -161,7 +161,7 @@ Click: add a centre · drag a marker: move it · double-click a marker: remove i
 - **Links** with very long lists of added or moved centres are accepted without a length limit, so an unusually long link can make the page slow.
 - **Fabrication:** the SVG layers and lines haven't yet been tried in Inkscape, laser-cutting software or on a plotter.
 - **Network:** p5.js and the fonts come from CDNs, so the page doesn't work offline as shipped.
-- The "← Form follows f(x)" link points to the parent folder (`../`), a leftover from the site the tool was first built for. Some source comments refer to a design document (`ISLAND-GENERATOR.md`) that isn't part of this repository.
+- The "← Form follows f(x)" link goes to the FFFX site (`fffx.cabinetofcuriosities.in`), where the tool is meant to be found, and the page title ends in "— Form follows f(x)". Some source comments refer to a design document (`ISLAND-GENERATOR.md`) that isn't part of this repository.
 
 ## Licence and terms
 
