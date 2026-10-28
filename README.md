@@ -6,7 +6,7 @@ Geo-Graphic turns seeded noise into a landscape and draws it as a map: grey or c
 
 **Formerly *Island Generator*.** It grew out of the author's hand-coded *Perlin Contour* sketches of 2020, and from 2026 it was redeveloped with AI assistance. The older screenshots below still show the former name; the internal JavaScript namespace (`IG`) keeps its original initials.
 
-There is no public hosted demo yet. To try it, run it locally (below).
+Try it online at <https://fffx.cabinetofcuriosities.in/geo-graphic/>, or run it locally (below).
 
 - [Development history](HISTORY.md): from the 2020 sketches to the current tool
 - [Technical notes](docs/TECHNICAL.md): terrain, contours, engraving, rendering and export in detail
