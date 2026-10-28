@@ -1,9 +1,9 @@
-/* Island Generator v5.0
+/* Geo-Graphic v5.8.1 (formerly Island Generator)
  * © Jesal Mehta, @cabofcuriosity
  * Based on Perlin Contour v1.0–v4.3 (2020)
  *
  * Full-bleed canvas with a HUD overlay: the shell, tokens and fonts of
- * Dance of Planets v3.0, so the two fffx tools read as a pair.
+ * Dance of Planets v3.0, so the two tools read as a pair.
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rajdhani:wght@300;400;500;600&display=swap');
@@ -307,7 +307,7 @@ kbd { font-family: var(--mono); font-size: 11px; padding: 1px 5px; border: 1px s
 }
 
 
-/* ── Island Generator additions ── */
+/* ── Geo-Graphic additions ── */
 .hud-title { top: 10px; }
 .seg.small button { font-size: 13px; padding: 5px 2px; }
 .hint.mono { font-family: var(--mono); font-size: 10px; color: var(--accent); }

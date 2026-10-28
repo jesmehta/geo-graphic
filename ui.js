@@ -1,4 +1,4 @@
-// Island Generator v5.0 — interface
+// Geo-Graphic v5.8.1 (formerly Island Generator) — interface
 // © Jesal Mehta, @cabofcuriosity
 // Owns IG.settings, wires the controls, fills the map facts and caption,
 // keeps the URL in sync. Talks to the sketch only through IG.sketch; the
@@ -495,7 +495,7 @@
     else if (st.largestShare > 0.7) what = `An island with ${st.pieces - 1} islet${st.pieces > 2 ? 's' : ''}`;
     else what = `An archipelago of ${st.pieces} islands`;
     $('caption').textContent = `${what} · ${pct(st.landShare)} land · ${st.bands ? st.bands + ' contour bands' : 'smooth shading'}`;
-    document.title = `${what} — Island Generator`;
+    document.title = `${what} — Geo-Graphic`;
 
     const rows = [
       ['Land', `${pct(st.landShare)}<em>of the frame</em>`],

@@ -1,4 +1,4 @@
-// Island Generator v5.8.1 — the sketch
+// Geo-Graphic v5.8.1 (formerly Island Generator) — the sketch
 // © Jesal Mehta, @cabofcuriosity
 // Based on Perlin Contour v1.0–v4.3 (2020)
 //
@@ -615,7 +615,7 @@ new p5(function (s) {
   }
   function baseName() {
     const [w, h] = printMM();
-    return `island-${S.seed}-${w}x${h}mm`;
+    return `geo-graphic-${S.seed}-${w}x${h}mm`;
   }
 
   // The sheet as the PNG export draws it, at P's size, onto a new canvas.

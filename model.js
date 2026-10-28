@@ -1,4 +1,4 @@
-// Island Generator v5.0 — the model
+// Geo-Graphic v5.8.1 (formerly Island Generator) — the model
 // © Jesal Mehta, @cabofcuriosity
 // Based on Perlin Contour v1.0–v4.3 (2020)
 //
